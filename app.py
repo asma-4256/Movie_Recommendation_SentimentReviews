@@ -180,6 +180,9 @@ if selected_movie:
                 img1 = get_poster_image(rec1['Poster_URL'])
                 if img1:
                     st.image(img1, use_container_width=True)
+                else:
+                    st.write("Poster not available")
+                
             with col2:
                 st.markdown(f"**{rec1['Title']}**")
                 st.markdown(f"**Year:** `{rec1.get('Year', 'N/A')}`")
@@ -196,6 +199,8 @@ if selected_movie:
                 img2 = get_poster_image(rec2['Poster_URL'])
                 if img2:
                     st.image(img2, use_container_width=True)
+                else:
+                    st.write("Poster not available")
             with col4:
                 st.markdown(f"**{rec2['Title']}**")
                 st.markdown(f"**Year:** `{rec2.get('Year', 'N/A')}`")
