@@ -1,11 +1,11 @@
-accelerate                    1.6.0
-huggingface-hub               0.30.2
-matplotlib                    3.10.1
-pickle-mixin                  1.0.2
-pip                           25.0
-scikit-learn                  1.6.1
-streamlit                     1.44.1
-streamlit-option-menu         0.4.0
-transformers                  4.51.3
-numpy                         2.0.1
-pandas                        2.2.3
+accelerate==1.6.0
+huggingface-hub==0.30.2
+matplotlib==3.10.1
+pickle-mixin==1.0.2
+pip==25.1.1
+scikit-learn==1.6.1
+streamlit==1.44.1
+streamlit-option-menu==0.4.0
+transformers==4.51.3
+numpy==2.0.1
+pandas==2.2.3
