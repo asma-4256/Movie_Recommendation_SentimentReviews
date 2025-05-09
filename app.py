@@ -12,10 +12,10 @@ import matplotlib.pyplot as plt
 # Load Models
 sentiment_wrapper = SentimentPipelineWrapper()
 
-with open('C:/Users/NEW/OneDrive/Desktop/MOVIES_RECOMMENDATON/movies_df1.pkl', 'rb') as f:
+with open('movies_df1.pkl', 'rb') as f:
     movies = pickle.load(f)
 
-with open('C:/Users/NEW/OneDrive/Desktop/MOVIES_RECOMMENDATON/similarity1.pkl', 'rb') as f:
+with open('similarity1.pkl', 'rb') as f:
     similarity = pickle.load(f)
 
 
