@@ -142,7 +142,11 @@ if selected_movie:
     reviews_text = get_movie_reviews(selected_movie)
     if reviews_text and reviews_text.strip().lower() != "no reviews available":
         review_list = sentiment_wrapper.split_reviews(reviews_text)
-        sentiments = sentiment_wrapper.analyze_sentiments(review_list)
+        if review_list:
+            sentiments = sentiment_wrapper.analyze_sentiments(review_list)
+        else:
+            sentiments = []
+        #sentiments = sentiment_wrapper.analyze_sentiments(review_list)
 
         label_map = {"LABEL_0": "Negative", "LABEL_1": "Neutral", "LABEL_2": "Positive"}
         sentiment_counts = {"Negative": 0, "Neutral": 0, "Positive": 0}
