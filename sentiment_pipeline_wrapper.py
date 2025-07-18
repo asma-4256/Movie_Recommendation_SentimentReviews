@@ -7,7 +7,7 @@ class SentimentPipelineWrapper:
     #from transformers import AutoTokenizer, AutoModelForSequenceClassification, pipeline
     self.model_name=model_name
     self.tokenizer = AutoTokenizer.from_pretrained(model_name)
-    self.model = AutoModelForSequenceClassification.from_pretrained(model_name)
+    self.model = AutoModelForSequenceClassification.from_pretrained(model_name).to("cpu")
     self.sentiment_model = pipeline("sentiment-analysis", model=self.model, tokenizer=self.tokenizer, device=-1)
 
   def analyze_sentiments(self,review_list):
