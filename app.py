@@ -1,4 +1,3 @@
-# At the top of your app file
 import streamlit as st
 import pandas as pd
 import pickle
@@ -9,7 +8,7 @@ from sentiment_pipeline_wrapper import SentimentPipelineWrapper
 import matplotlib.pyplot as plt
 #import torch
 
-# Load Models
+# Loading Models
 sentiment_wrapper = SentimentPipelineWrapper()
 
 with open('movies_df1.pkl', 'rb') as f:
@@ -77,7 +76,7 @@ body {{
 st.markdown(responsive_style, unsafe_allow_html=True)
 
 
-# Functions remain same...
+
 def recommend_movie(movie_title):
     if movie_title not in movies['Title'].values:
         return []
